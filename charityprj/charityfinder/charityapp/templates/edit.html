@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charity Information Update</title>
+</head>
+<body>
+
+<form method="post" action="/update/{{charity.id}}">
+
+{% csrf_token %}
+    <div>
+
+        <label>Charity Reg. Number</label>
+
+        <input type="text" name="reg_number" value="{{student.reg_number}}">
+
+    </div>
+
+    <div>
+
+        <label>Name</label>
+
+        <input type="text" name="name" value="{{student.name}}">
+
+    </div>
+
+    <div>
+
+        <label>Student email</label>
+
+         <input type="email" name="email" value="{{student.email}}">
+
+    </div>
+
+    <div>
+
+        <label>Student age</label>
+
+         <input type="number" name="age" value="{{student.age}}">
+
+    </div>
+
+    <br>
+
+    <div>
+
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+
+</body>
+</html>
